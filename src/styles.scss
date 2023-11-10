@@ -1,9 +1,98 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-// @import '~@angular/material/theming';
+body, .p-component{ margin: 0; font-family: 'Poppins', sans-serif;}
+@import 'primeflex/primeflex.scss';
 
-// @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+.p-button.p-button-sm{
+font-size: 0.775rem;
+padding: 0.3rem 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// body{
+//     background-color: var(--surface-100);
+// }
+

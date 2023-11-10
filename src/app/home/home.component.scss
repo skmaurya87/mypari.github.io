@@ -1,0 +1,126 @@
+app-home{
+.navbar{
+    .p-toolbar{
+        padding: 0px;
+        border: none;
+    }
+}
+.topNavBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+.menu a {
+    text-decoration: none;
+    display: inline-flex;
+    padding: 18px 18px;
+    margin: 0px 5px;
+    transition: 300ms all ease-in;
+        .p-ink {
+            background: rgba(#9c27b0, 0.3);
+        }
+}
+.active{
+    position: relative;
+    &::after{
+        content: "";
+        content: "";
+        height: 3px;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0;
+        background: rgba(#9c27b0, 1);
+    }
+
+}
+
+.lastChild{
+    width: 140px;
+    position: relative;
+    position: relative;
+    // overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 43px;
+    background: linear-gradient(135deg,  #7529d8 0%,#5f0e70 100%);
+    &::before{
+        content: "";
+        left: -40px;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        top: 0px;
+        background: linear-gradient(253deg, #7529d8 0%,#5f0e70 100%);
+        width: 40px;
+        transform-origin: bottom right;
+        -ms-transform: skew(-30deg, 0deg);
+        -webkit-transform: skew(-30deg, 0deg);
+        transform: skew(-30deg, 0deg);
+    }
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+.theme-dropdown{
+    .p-dropdown{
+        transform: scale(.75);
+        border-radius: 18px;
+    }
+    .p-overlay.p-component{
+        right: 0px;
+        left: auto !important;
+    }
+}
+
+/* Responsive Menu Toggle */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        position: absolute;
+        top: 56px;
+        left: -60%;
+        width: 60%;
+        z-index: 5;
+        background-color: #333;
+        height: 100%;
+        margin: 0px;
+        padding: 20px;
+        transition: all 300ms ease-in;
+    }
+
+    // .menu.active {
+    //     left: 0;
+    // }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 20px;
+    }
+    .menu-icon:hover + .menu{
+        left: 0%;
+    }
+}
+
+
+
+} 

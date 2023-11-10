@@ -1,13 +1,17 @@
-<!-- <p>home works!</p> -->
-<button mat-button>Click me</button>
-<div class="example-button-row">
-    <a href="#" routerLink="about" mat-flat-button>Basic</a>
-    <button routerLink="about" mat-flat-button color="primary">Primary</button>
-    <button mat-flat-button color="accent">Accent</button>
-    <button mat-flat-button color="warn">Warn</button>
-    <button mat-flat-button disabled>Disabled</button>
-    <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
-  </div>
+<nav class="shadow-2 topNavBar">
+    <div class="logo">
+        <a href="#">Your Logo</a>
+    </div>
+    <div class="menu-icon">&#9776;</div>
+    <ul class="menu">
+        <li><a href="#" pRipple class="active">Home</a></li>
+        <li><a href="#" pRipple>About</a></li>
+        <li><a href="#" pRipple>Services</a></li>
+        <li><a href="#" pRipple>Portfolio</a></li>
+        <li><a href="#" pRipple>Contact</a></li>
+        <li class="lastChild">
+            <p-dropdown class="theme-dropdown" [options]="themes" [(ngModel)]="selectedTheme" (onChange)="changeTheme(selectedTheme.id)"></p-dropdown>
+        </li>
+    </ul>
+</nav>
 
-<router-outlet></router-outlet>
-  
