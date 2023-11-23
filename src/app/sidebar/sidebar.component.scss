@@ -1,0 +1,28 @@
+app-sidebar{
+    .main-container{
+        display: flex;
+        min-height: 100vh;
+        .sidebar{
+            flex: 0 0 auto;
+            width: 200px;
+            transition: all 300ms ease-in;
+            .logo{
+                background-image: url('../../assets/images/logo_dark.png');
+                width: 200px;
+                height: 60px;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            &.inActive{
+                margin-left: -200px;
+            }
+            &.active{
+                margin-left: 0px;
+            }
+        }
+        .main-contant{
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+    }
+}

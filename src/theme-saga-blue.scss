@@ -182,9 +182,12 @@
     --docsearch-hit-active-color: var(--primary-color-text)
 }
 .topNavBar{background-color: var(--surface-0);}
-.theme-dropdown{
-    .p-dropdown{
-        background-color: var(--yellow-500);
-        border-color: var(--yellow-500);
+.main-container{
+    .sidebar{
+        background-color: var(--indigo-800);
+        .logo{
+            border-bottom: solid 1px var(--indigo-900);
+        }
     }
 }
+

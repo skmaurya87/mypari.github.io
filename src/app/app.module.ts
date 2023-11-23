@@ -7,6 +7,7 @@ import { AboutModule } from './about/about.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PrimeNGConfig } from 'primeng/api';
 import { RippleModule } from 'primeng/ripple'; 
+import { SidebarModule } from './sidebar/sidebar.module';
 const initializeAppFactory = (primeConfig: PrimeNGConfig) => () => {
   // ......
   primeConfig.ripple = true;
@@ -20,6 +21,7 @@ const initializeAppFactory = (primeConfig: PrimeNGConfig) => () => {
     BrowserModule,
     AppRoutingModule,
     HomeModule,
+    SidebarModule,
     AboutModule,
     BrowserAnimationsModule,
     RippleModule

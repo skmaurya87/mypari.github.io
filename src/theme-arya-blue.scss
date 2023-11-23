@@ -183,3 +183,11 @@
 }
 
 .topNavBar{background-color: var(--surface-100);}
+.main-container{
+    .sidebar{
+        background-color: var(--surface-50);
+        .logo{
+            border-bottom: solid 1px var(--surface-100);
+        }
+    }
+}

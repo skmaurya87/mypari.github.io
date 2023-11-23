@@ -1,0 +1,17 @@
+<div class="main-container">
+    <div class="sidebar" [ngClass]="isVisible ? 'inActive' : 'active'">
+        <div class="logo"></div>
+        <a routerLink="about" pRipple>About</a>
+    </div>
+    <div class="main-contant">
+        <div class="home">
+            <app-home></app-home>
+        </div> 
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+
+
+
+

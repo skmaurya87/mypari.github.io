@@ -10,6 +10,7 @@ app-home{
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 60px;
 }
 
 .logo a {
@@ -33,6 +34,14 @@ app-home{
             background: rgba(#9c27b0, 0.3);
         }
 }
+.toggler{
+    padding: 6px;
+    i{
+        font-size: 24px;
+        cursor: pointer;
+        transition: all 300ms ease;
+    }
+}
 .active{
     position: relative;
     &::after{
@@ -43,16 +52,15 @@ app-home{
         left: 0px;
         right: 0px;
         bottom: 0;
-        background: rgba(#9c27b0, 1);
+        background: var(--purple-300);
     }
 
 }
-
+.them-menu{display: none;}
 .lastChild{
-    width: 140px;
+    width: 100px;
     position: relative;
     position: relative;
-    // overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,13 +88,10 @@ app-home{
     font-size: 24px;
 }
 .theme-dropdown{
-    .p-dropdown{
+    .p-togglebutton{
         transform: scale(.75);
-        border-radius: 18px;
-    }
-    .p-overlay.p-component{
-        right: 0px;
-        left: auto !important;
+        border-radius: 22px;
+        width: 90px;
     }
 }
 
@@ -95,30 +100,35 @@ app-home{
     .menu {
         flex-direction: column;
         position: absolute;
-        top: 56px;
+        top: 60px;
         left: -60%;
         width: 60%;
         z-index: 5;
-        background-color: #333;
+        background-color: var(--surface-200);
         height: 100%;
         margin: 0px;
-        padding: 20px;
+        padding: 0px;
         transition: all 300ms ease-in;
     }
-
-    // .menu.active {
-    //     left: 0;
-    // }
-
+    .menu a {
+        width: 100%;
+        margin: 0px 0px;}
     .menu-icon {
         display: block;
-        position: absolute;
-        top: 18px;
-        right: 20px;
+        width: 36px;
+        text-align: center;
     }
     .menu-icon:hover + .menu{
         left: 0%;
     }
+    .lastChild{
+       width: 100%;
+       margin: 0px;
+       &::before{
+        display: none;
+       }
+    }
+
 }
 
 

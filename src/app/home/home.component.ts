@@ -1,6 +1,8 @@
 import { Component, ViewEncapsulation} from '@angular/core';
 import { ThemeService } from '../theme.service';
 import { MenuItem, SelectItem } from 'primeng/api';
+import { ToggleServiceService } from '../allService/toggle-service.service';
+
 
 @Component({
   selector: 'app-home',
@@ -10,10 +12,13 @@ import { MenuItem, SelectItem } from 'primeng/api';
 })
 export class HomeComponent {
   name = 'Angular 5';
+  checked1: boolean = false;
+  navIcon: boolean = false;
+  toggleNavIcon : boolean = false;
 
   themes = [
-    {label: 'Saga Blue', id: 'saga-blue'},
-    {label: 'Arya Blue', id: 'arya-blue'},
+    {label: 'Light', id: 'saga-blue'},
+    {label: 'Dark', id: 'arya-blue'},
     {label: 'MD Light Indigo', id: 'md-light-indigo'},
     {label: 'MD Dark Indigo', id: 'md-dark-indigo'},
     {label: 'BS4 Light', id: 'bootstrap4-light-purple'},
@@ -21,15 +26,31 @@ export class HomeComponent {
   ]
 
 
-  constructor(private themeService: ThemeService) {
+  constructor(private themeService: ThemeService,  private toggleService: ToggleServiceService) {
+
 
   }
   
 
   selectedTheme :{id: string; label: string, } = this.themes[0]
-  changeTheme(theme: string){
-    this.themeService.switchTheme(theme);
+  changeTheme(){
+    if(this.checked1 == true){
+      this.themeService.switchTheme('arya-blue');
+    }
+    else{
+      this.themeService.switchTheme('saga-blue');
+    }
   }
+  
+
+
+
+  toggleSidebar() {
+    this.toggleService.toggle();
+    this.navIcon = !this.navIcon;
+  }
+
+  
 
   ngOnInit() {
    

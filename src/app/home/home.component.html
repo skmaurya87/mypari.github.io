@@ -1,17 +1,28 @@
 <nav class="shadow-2 topNavBar">
-    <div class="logo">
-        <a href="#">Your Logo</a>
+    <div class="toggler">
+        <i class="pi" [ngClass]="navIcon ? 'pi-times' : 'pi-bars'" pRipple (click)="toggleSidebar()"></i>
     </div>
     <div class="menu-icon">&#9776;</div>
     <ul class="menu">
-        <li><a href="#" pRipple class="active">Home</a></li>
-        <li><a href="#" pRipple>About</a></li>
+        <li><a href="#" pRipple routerLinkActive="active">Home</a></li>
+        <li><a routerLink="about" pRipple>About</a></li>
         <li><a href="#" pRipple>Services</a></li>
         <li><a href="#" pRipple>Portfolio</a></li>
         <li><a href="#" pRipple>Contact</a></li>
         <li class="lastChild">
-            <p-dropdown class="theme-dropdown" [options]="themes" [(ngModel)]="selectedTheme" (onChange)="changeTheme(selectedTheme.id)"></p-dropdown>
+            <p-toggleButton class="theme-dropdown" onLabel="Light" offLabel="Dark"  [(ngModel)]="checked1" (onChange)="changeTheme()"></p-toggleButton>
+            <!-- <p-selectButton [options]="themes" [(ngModel)]="selectedTheme" (onChange)="changeTheme(selectedTheme.id)">
+                <ng-container *ngFor="let item of themes, let i index">
+                        <span>{{item.label}}</span>
+                </ng-container>
+            </p-selectButton> -->
+            <!-- <p-selectButton [options]="themes" [(ngModel)]="selectedTheme" (onChange)="changeTheme(selectedTheme.id)"></p-selectButton> -->
+            <!-- <p-dropdown class="theme-dropdown" [options]="themes" [(ngModel)]="selectedTheme" (onChange)="changeTheme(selectedTheme.id)"></p-dropdown> -->
         </li>
     </ul>
 </nav>
 
+
+
+
+<!-- <router-outlet></router-outlet> -->

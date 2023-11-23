@@ -8,7 +8,11 @@ body, .p-component{ margin: 0; font-family: 'Poppins', sans-serif;}
 font-size: 0.775rem;
 padding: 0.3rem 1rem;
 }
-
+.mat-mdc-selection-list{
+    width: 300px;
+    max-height: 200px;
+    overflow: auto;
+}
 
 
 

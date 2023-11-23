@@ -5,6 +5,9 @@ import { DOCUMENT } from '@angular/common';
   providedIn: 'root'
 })
 export class ThemeService {
+  emitData() {
+    throw new Error('Method not implemented.');
+  }
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
   switchTheme(theme: string) {

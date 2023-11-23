@@ -4,21 +4,11 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
+import { SidebarModule } from './sidebar/sidebar.module';
 
 
 
-const routes: Routes = [
-  { path: '', component:HomeComponent, children:[
-    {
-    path: 'about',
-    loadChildren: () =>
-      import('./about/about.module').then((m) => m.AboutModule),
-    component: AboutComponent,
-  },
-    // { path: 'about', component:AboutComponent },
-  ]
-  },
-]; 
+const routes: Routes = []; 
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,{ initialNavigation: 'enabledBlocking'})],
@@ -29,3 +19,19 @@ const routes: Routes = [
 
 })
 export class AppRoutingModule { }
+
+
+
+
+// { path: '', component:SidebarModule, children:[
+//   {
+//   path: 'about',
+//   loadChildren: () =>
+//     import('./about/about.module').then((m) => m.AboutModule),
+//   component: AboutComponent,
+// },
+//   // { path: 'about', component:AboutComponent },
+// ]
+
+// },
+// // { path: 'about', component:AboutComponent },

@@ -17,8 +17,20 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import {ToolbarModule} from 'primeng/toolbar';
 import {MenuModule} from 'primeng/menu';
+import { SelectButtonModule } from 'primeng/selectbutton';
+import {ToggleButtonModule} from 'primeng/togglebutton';
+import {AutoCompleteModule} from 'primeng/autocomplete';
 
-const appRoutes: Routes = [] 
+
+
+
+const appRoutes: Routes = [
+  // {
+  //   path: '', component: HomeComponent, children: [
+  //     { path: 'about', component: AboutComponent },
+  //   ]
+  // }
+] 
 
 @NgModule({
   declarations: [
@@ -45,7 +57,9 @@ const appRoutes: Routes = []
     FormsModule,
     ToolbarModule,
     MenuModule,
-
+    SelectButtonModule,
+    ToggleButtonModule,
+    AutoCompleteModule
   ],
   exports: [
     HomeComponent
