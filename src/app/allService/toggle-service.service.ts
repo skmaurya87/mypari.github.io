@@ -18,7 +18,7 @@ export class ToggleServiceService {
     this.toggleSource.next(!this.toggleSource.value);
   }
 
-
+ 
 
 
   isVisible() {
