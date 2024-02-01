@@ -7,22 +7,11 @@ import { MatListModule } from '@angular/material/list';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
-import { AccordionModule } from 'primeng/accordion';
-import { AutoCompleteModule } from 'primeng/autocomplete';
-import { ButtonModule } from 'primeng/button';
-import { CheckboxModule } from 'primeng/checkbox';
-import { DropdownModule } from 'primeng/dropdown';
-import { InputTextModule } from 'primeng/inputtext';
-import { InputTextareaModule } from 'primeng/inputtextarea';
-import { MenuModule } from 'primeng/menu';
-import { RadioButtonModule } from 'primeng/radiobutton';
 import { RippleModule } from 'primeng/ripple';
-import { SelectButtonModule } from 'primeng/selectbutton';
-import { ToggleButtonModule } from 'primeng/togglebutton';
 import { ToolbarModule } from 'primeng/toolbar';
 import { AboutComponent } from '../about/about.component';
 import { HomeModule } from '../home/home.module';
-
+import {PanelMenuModule} from 'primeng/panelmenu';
 
 
 const appRoutes: Routes = [
@@ -43,25 +32,14 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule,
     BrowserAnimationsModule,
-    ButtonModule,
     RouterModule.forRoot(appRoutes),
     MatListModule,
     RippleModule,
-    AccordionModule,
     HttpClientModule,
-    InputTextModule,
-		CheckboxModule,
-		ButtonModule,
-		RadioButtonModule,
-		InputTextareaModule,
-		DropdownModule,
     FormsModule,
     ToolbarModule,
-    MenuModule,
-    SelectButtonModule,
-    ToggleButtonModule,
-    AutoCompleteModule,
-    HomeModule
+    HomeModule,
+    PanelMenuModule
   ],
   exports: [
     SidebarComponent
@@ -69,16 +47,6 @@ const appRoutes: Routes = [
 })
 export class SidebarModule { }
 
-
-// @NgModule({
-//   declarations: [
-//     SidebarComponent
-//   ],
-//   imports: [
-//     CommonModule
-//   ]
-// })
-// export class SidebarModule { }
 
 
 

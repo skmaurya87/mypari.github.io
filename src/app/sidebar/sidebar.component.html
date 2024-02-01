@@ -1,13 +1,15 @@
 <div class="main-container">
     <div class="sidebar" [ngClass]="isVisible ? 'inActive' : 'active'">
         <div class="logo"></div>
-        <a routerLink="about" pRipple>About</a>
+            <p-panelMenu class="main-menu" [model]="menuItems" [style]="{'width':'200px'}" [multiple]="false"></p-panelMenu>
     </div>
     <div class="main-contant">
         <div class="home">
             <app-home></app-home>
         </div> 
+        <div class="p-3">
         <router-outlet></router-outlet>
+        </div>
     </div>
 </div>
 

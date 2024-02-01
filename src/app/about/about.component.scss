@@ -1,0 +1,146 @@
+
+.search{
+display: inline-flex;
+align-items: center;
+color:#000;
+background-color: bisque;
+padding: 10px;
+border-radius: 4px;
+border: solid 1px #333;
+}
+
+.search :is(input, button){
+    background-color: transparent;
+    color: firebrick;
+    border: none;
+    outline: none;
+
+}
+.searchInput{
+    width: 0px;
+    transition: width 0.5s;
+}
+.searchButton{
+    display: grid;
+    place-items: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: color 0.25s;
+    background-color: blue;
+}
+.searchButton:hover{
+    background-color: aqua;
+}
+.search{
+ &:focus-within{
+    input{
+        width: 200px;
+    }
+    &:focus{
+        ~ input{
+            width: 200px;
+        }
+    }
+ }
+
+}
+// :focus-within input{
+//     width: 200px;
+// }
+// .search:focus-within input:valid{
+//     width: 200px;
+// }
+
+
+
+.custom_fx_metric_menu{
+    display: flex;
+    width: 400px;
+    position: relative;
+    box-shadow: 0px 0px 3px #ccc;
+    background-color: #FFF;
+    overflow-y: auto;
+    max-height: 200px;
+    align-items: stretch;
+
+.parent_section{
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    flex-direction: column;
+    width: 200px;
+    border-right: solid 1px #eee;
+    height: 100%;
+    >li{
+        padding: 6px;
+        position: relative;
+    }
+}
+.child_section{
+    display: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    flex-direction: column;
+    position: absolute;
+    left: 100%;
+    top: 0px;
+    width: calc(100% - 20px);
+    >li{
+        padding: 6px;
+        position: relative;
+    }
+}
+&:hover{
+    .parent_section >li:hover{
+        background-color: #ccc;
+        .child_section{
+            display: flex;
+            >li:hover{
+                background-color: #ccc; 
+            }
+        }
+    }
+
+}
+
+}
+
+
+
+// .custom_fx_metric_menu{
+//     display: flex;
+//     width: 400px;
+//     background-color: #FFF;
+//     box-shadow: 0px 0px 3px #ccc;
+//     .fxListOptions{
+//         flex: 1 1 50%;
+//         border-right: solid 1px #eee;
+//         p{
+//             padding: 6px;
+//             margin: 0px;
+//             &:hover{
+//                 background-color: #eee;
+//             }
+//         }
+//     }
+//     .child_section{
+//         flex: 1 1 50%;
+//         opacity: 0;
+//         visibility: hidden;
+//         p{
+//             padding: 6px;
+//             margin: 0px;
+//         }
+//     }
+//     &:hover{
+//         .child_section{
+//             display: flex;
+//             flex-direction: column;
+//         }
+//     }
+// }
+
+

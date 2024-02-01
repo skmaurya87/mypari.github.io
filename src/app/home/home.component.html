@@ -1,15 +1,22 @@
-<nav class="shadow-2 topNavBar">
+<nav class="topNavBar bg-gray-50 dark:bg-gray-800">
     <div class="toggler">
         <i class="pi" [ngClass]="navIcon ? 'pi-times' : 'pi-bars'" pRipple (click)="toggleSidebar()"></i>
     </div>
-    <div class="menu-icon">&#9776;</div>
+    <!-- <div class="menu-icon">&#9776;</div> -->
     <ul class="menu">
-        <li><a href="#" pRipple routerLinkActive="active">Home</a></li>
-        <li><a routerLink="about" pRipple>About</a></li>
-        <li><a href="#" pRipple>Services</a></li>
-        <li><a href="#" pRipple>Portfolio</a></li>
-        <li><a href="#" pRipple>Contact</a></li>
         <li class="lastChild">
+
+
+            <button class="theme-toggle">
+                <svg class="dark:hidden" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M5.5 11.5a6 6 0 1 1 12 0 6 6 0 0 1-12 0z" />
+                </svg>
+                <svg class="light:hidden" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M12 18.5a6 6 0 1 1 0-12 6 6 0 0 1 0 12z" />
+                </svg>
+              </button>
+
+
             <p-toggleButton class="theme-dropdown" onLabel="Light" offLabel="Dark"  [(ngModel)]="checked1" (onChange)="changeTheme()"></p-toggleButton>
             <!-- <p-selectButton [options]="themes" [(ngModel)]="selectedTheme" (onChange)="changeTheme(selectedTheme.id)">
                 <ng-container *ngFor="let item of themes, let i index">

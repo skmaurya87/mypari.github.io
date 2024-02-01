@@ -15,6 +15,7 @@ export class HomeComponent {
   checked1: boolean = false;
   navIcon: boolean = false;
   toggleNavIcon : boolean = false;
+  htmlElement: any;
 
   themes = [
     {label: 'Light', id: 'saga-blue'},
@@ -24,6 +25,7 @@ export class HomeComponent {
     {label: 'BS4 Light', id: 'bootstrap4-light-purple'},
     {label: 'BS4 Dark', id: 'bootstrap4-dark-purple'},
   ]
+  document: any;
 
 
   constructor(private themeService: ThemeService,  private toggleService: ToggleServiceService) {
@@ -43,7 +45,10 @@ export class HomeComponent {
   }
   
 
-
+  onClick() {
+  this.document.querySelector('html');
+    this.htmlElement.classList.toggle('dark');
+  }
 
   toggleSidebar() {
     this.toggleService.toggle();
